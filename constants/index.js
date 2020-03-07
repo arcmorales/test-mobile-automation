@@ -7,7 +7,7 @@ exports.ANDROID = {
   PLATFORM_VERSION: '9.0',
   ORIENTATION: 'PORTRAIT',
   AUTOMATION_NAME: 'UiAutomator2',
-  APP: '/Users/aramorales/Source/Ara/test-ui-automation/app/nativeAndroid.apk',
+  APP: './app/nativeAndroid.apk',
   NORESET: true
 }
 
@@ -17,5 +17,5 @@ exports.IOS = {
   PLATFORM_VERSION: '13.1',
   ORIENTATION: 'PORTRAIT',
   AUTOMATION_NAME: 'XCUITest',
-  APP: '/Users/aramorales/Source/Ara/test-ui-automation/app/nativeiOS.zip'
+  APP: './app/nativeiOS.zip'
 }
