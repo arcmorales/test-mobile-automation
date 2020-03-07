@@ -31,6 +31,15 @@ This framework is designed to use a testrunner that can handle logic, allowing t
 Command to run tests: `npm test <platform> <suite>` Example: `npm test ios login` or `npm test android login`. For this repo, since there is only one test written, use `login` as the suite.
 
 
+## Demo
+
+#### iOS
+![alt text](ios_login.gif)
+
+
+#### Android
+![alt text](android_login.gif)
+
 ## Environment
 Credentials and secrets are stored in a `.env` file. Follow the `.env.sample` file as reference.
 
