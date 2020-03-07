@@ -1,6 +1,8 @@
 'use strict'
 import Launcher from '@wdio/cli'
 
+require('dotenv').config()
+
 let conf
 
 // specify which suite to run. No param would select "default" suite
@@ -15,6 +17,20 @@ if (!platform || (platform.toLowerCase() !== 'ios' && platform.toLowerCase() !==
   conf = './config/wdio.ios.conf.js'
 } else if (platform.toLowerCase() === 'android') {
   conf = './config/wdio.android.conf.js'
+}
+
+// Ensure required ENV vars are set
+const requiredEnv = [
+  'POSITIVE_USER',
+  'POSITIVE_PASSWORD',
+  'INVALID_EMAIL',
+  'INVALID_PASSWORD'
+]
+const unsetEnv = requiredEnv.filter((env) => !process.env[env])
+
+if (unsetEnv.length > 0) {
+  console.error('Required ENV variables are not set: [' + unsetEnv.join(', ') + ']')
+  process.exit()
 }
 
 const wdio = new Launcher(conf, { suite: suite, date: Date.now() })
