@@ -53,3 +53,4 @@ There are three key config files on this framework:
 1. As per instruction, "The test case is considered as passed successfully when the next screen after sign-in appears". However, the native demo app has no redirection but rather shows a pop-up confirmation. This is what is used to determine a *successful* log in on this test. 
 2. The app is not hooked up with any actual DB. There is also no password field. Therefore, any log in is considered a successful log in.
 3. The app has inline validation for the fields. These are added on the test case
+4. The test runs on iOS 13.1 (simulator) and Android 9.0 (emulator). Other OS versions (for compatibility) were NOT tested.
